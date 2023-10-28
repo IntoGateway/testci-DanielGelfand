@@ -26,7 +26,7 @@ contract FooTest is PRBTest, StdCheats {
     function test_Example() external {
         console2.log("Hello World");
         uint256 x = 42;
-        assertEq(foo.id(x), x, "value mismatch");
+        assertEq(foo.id(x), x + 1, "value mismatch");
     }
 
     /// @dev Fuzz test that provides random values for an unsigned integer, but which rejects zero as an input.
