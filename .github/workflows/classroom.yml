@@ -62,23 +62,23 @@ jobs:
 
 
   grade:
-  needs: ["build"]
-    name: Autograding
-    if: ${{ !github.event.repository.is_template }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: "foundry-rs/foundry-toolchain@v1"
-      - uses: actions/checkout@v3
-      
-      # run grading
-      # add id to step so outputs can be referenced
-      - uses: education/autograding@v1
-        name: "** Grading and Feedback **"
-        id: autograde
+    needs: ["build"]
+      name: Autograding
+      if: ${{ !github.event.repository.is_template }}
+      runs-on: ubuntu-latest
+      timeout-minutes: 5
+      steps:
+        - uses: "foundry-rs/foundry-toolchain@v1"
+        - uses: actions/checkout@v3
+        
+        # run grading
+        # add id to step so outputs can be referenced
+        - uses: education/autograding@v1
+          name: "** Grading and Feedback **"
+          id: autograde
 
-    outputs:
-      grading-score: ${{ steps.autograde.outputs.Points }}
+      outputs:
+        grading-score: ${{ steps.autograde.outputs.Points }}
 
   # job to build activity status icons
   build-activity-icons:
