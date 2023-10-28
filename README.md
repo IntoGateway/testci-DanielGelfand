@@ -11,6 +11,8 @@
 
 A Foundry-based template for developing Solidity smart contracts, with sensible defaults.
 
+<img alt="points bar" align="right" height="36" src="../../blob/status/.github/activity-icons/points-bar.svg" />
+
 ## What's Inside
 
 - [Forge](https://github.com/foundry-rs/foundry/blob/master/forge): compile, test, fuzz, format, and deploy smart
