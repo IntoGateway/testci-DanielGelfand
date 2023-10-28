@@ -1,0 +1,24 @@
+{
+    "tests": [
+        {
+            "name": "Test 1",
+            "setup": "",
+            "run": "forge test -vvv --match-test test_Example",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 5
+        },
+        {
+            "name": "Test 2",
+            "setup": "",
+            "run": "forge test -vvv --match-test test_Example",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 1,
+            "points": 5
+        }
+    ]
+}
