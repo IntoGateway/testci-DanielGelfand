@@ -16,8 +16,8 @@ on:
 
 permissions:
   checks: write
-  actions: read
-  contents: read
+  actions: write
+  contents: write
 
 jobs:
   # job to run autograding
