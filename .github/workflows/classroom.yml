@@ -43,7 +43,7 @@ jobs:
     name: Build Activity Icons
     runs-on: ubuntu-latest
     if: always()
-    needs: grade
+    needs: ["grade"]
     steps:
       # need to checkout whole repo
       - uses: actions/checkout@v3
@@ -61,7 +61,7 @@ jobs:
       - name: points bar
         uses: markpatterson27/points-bar@v1
         with:
-          points: ${{ needs.outputs.grading-score }}
+          points: ${{ needs.grade.outputs.grading-score }}
           path: '.github/activity-icons/points-bar.svg'
 
       # commit and push activity icons if statuses have changed
