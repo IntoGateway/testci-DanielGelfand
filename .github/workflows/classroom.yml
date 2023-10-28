@@ -11,6 +11,11 @@ on:
     branches:
       - "main"
 
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
 jobs:
   build:
     runs-on: "ubuntu-latest"
@@ -59,21 +64,6 @@ jobs:
         run: |
           echo "## Tests result" >> $GITHUB_STEP_SUMMARY
           echo "✅ Passed" >> $GITHUB_STEP_SUMMARY
-
-  on: 
-    push:
-      branches:
-      - '*'
-      - '!status'
-      - '!feedback'
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-  permissions:
-    checks: write
-    actions: read
-    contents: read
 
   grade:
       needs: ["build"]
