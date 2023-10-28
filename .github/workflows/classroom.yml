@@ -62,7 +62,7 @@ jobs:
 
 
   grade:
-    needs: ["build"]
+      needs: ["build"]
       name: Autograding
       if: ${{ !github.event.repository.is_template }}
       runs-on: ubuntu-latest
